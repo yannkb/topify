@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			{% block title %}Welcome!
+			{% block title %}Topify
 			{% endblock %}
 		</title>
 		{% block stylesheets %}{% endblock %}
@@ -16,12 +16,6 @@
 		{% endblock %}
 	</head>
 	<body>
-		{% for message in app.flashes('success') %}
-			<div class="notification is-success">
-				<button class="delete"></button>
-				{{ message }}
-			</div>
-		{% endfor %}
 		<section class="section">
 			<div class="container"> {% block body %}{% endblock %}
 				</div>
@@ -31,7 +25,7 @@
 					<p>
 						<strong>Topify</strong>
 						by
-						<a href="https://x.com/yannkb_">Yannou</a>
+						<a href="https://x.com/yannkb_">Yannou with ❤️</a>
 					</p>
 				</div>
 			</footer>

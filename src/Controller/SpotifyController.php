@@ -54,7 +54,10 @@ class SpotifyController extends AbstractController
 
         $this->addFlash('success', 'Playlist successfully updated!');
 
-        return $this->redirectToRoute('app_spotify_index');
+        return $this->render('spotify/index.html.twig', [
+            'playlist' => $this->api->getPlaylist($topTracksPlaylistId),
+            'tracks' => $this->api->getPlaylistTracks($topTracksPlaylistId)
+        ]);
     }
 
     #[Route('/callback', name: 'app_spotify_callback')]
