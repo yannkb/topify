@@ -25,4 +25,7 @@ return [
     '@hotwired/turbo' => [
         'version' => '7.3.0',
     ],
+    'htmx.org' => [
+        'version' => '2.0.1',
+    ],
 ];
