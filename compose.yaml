@@ -3,7 +3,7 @@ services:
     image: caddy:2-alpine
     restart: unless-stopped
     ports:
-      - "8000:80"
+      - "8001:80"
       - "8443:443"
       - "8443:443/udp"
     volumes:
