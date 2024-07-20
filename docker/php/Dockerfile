@@ -2,6 +2,8 @@
 
 FROM php:8.3-fpm
 
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+
 # Copy the php config file
 COPY ./docker/php/php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
 
