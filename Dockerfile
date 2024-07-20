@@ -3,6 +3,8 @@
 # Versions
 FROM php:8.3
 
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+
 WORKDIR /app
 
 VOLUME /app/var/
