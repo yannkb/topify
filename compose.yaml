@@ -1,0 +1,22 @@
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+      - "8443:443"
+      - "8443:443/udp"
+    volumes:
+      - ./docker/Caddyfile:/etc/caddy/Caddyfile
+      - ./:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+
+  php-fpm:
+    image: php:8.3-fpm-alpine
+    volumes:
+      - ./:/srv
+
+volumes:
+  caddy_data:
+  caddy_config:

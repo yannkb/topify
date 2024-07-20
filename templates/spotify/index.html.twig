@@ -2,7 +2,7 @@
 
 {% block body %}
 	<div class="content has-text-centered">
-		<h1 class="title">Topify</h1>
+		<h1 class="title mt-3">Topify</h1>
 		{% if tracks is not defined %}
 			<a class="button is-primary is-rounded" href="{{ path('app_spotify_update') }}">Create or refresh my playlist</a>
 		{% endif %}
