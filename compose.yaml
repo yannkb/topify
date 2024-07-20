@@ -6,8 +6,8 @@ services:
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
-    ports:
-      - "80:80"
+    # ports:
+    #   - "8000:8000"
     volumes:
       - .:/app/
     links:
