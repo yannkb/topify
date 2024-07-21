@@ -1,4 +1,4 @@
-localhost {
+:80 {
     root * /srv/public
 
     # serve files directly if they can be found (e.g. CSS or JS files in public/)
