@@ -1,13 +1,13 @@
 services:
   caddy:
-    image: caddy:2-alpine
+    build:
+      context: ./docker/caddy
     restart: unless-stopped
     ports:
       - "8001:80"
       - "8443:443"
       - "8443:443/udp"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
       - ./:/srv
       - caddy_data:/data
       - caddy_config:/config
